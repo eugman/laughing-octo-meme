@@ -4,7 +4,7 @@
 sudo apt-get update && sudo apt-get -y upgrade
 
 #Install command line tools
-sudo apt-get -y install htop lynx irssi screen tmux wicd-config aptitude mc
+sudo apt-get -y install htop lynx irssi screen tmux wicd-config aptitude mc nmap
 
 #install samaba
 sudo apt-get install cifs-utils samaba-common-bin
@@ -31,7 +31,7 @@ gem install sinatra haml
 sudo apt-get install apache2 php5 mysql-client mysql-server php-myadmin
 
 #install desktop apps
-sudo apt-get -y install iceweasel geany remmina remmina-plugin-rdp evince
+sudo apt-get -y install iceweasel geany remmina remmina-plugin-rdp evince zenmap
 
 
 
