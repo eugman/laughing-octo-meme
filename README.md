@@ -14,6 +14,7 @@ Things to install Everywhere:
 * Ruby (sinatra/haml)
 * libedit
 * geany
+* mono
 
 Things to install only on the pi:
 * wicd-config
@@ -29,6 +30,7 @@ Things to install only on a real desktop:
 * MEAN stack?
 * eric
 * android studio???
+* monodevelop
 
 Things to configure:
 * git
