@@ -15,7 +15,7 @@ su -c "yum -y groupinstall development-tools"
 su -c "yum -y install libedit-dev* man-pages libstdc++-docs"
 
 #install C# programming
-su -c "yum -y install monodevelop"
+su -c "yum -y install monodevelop monodevelop-versioncontrol monodevelop-database"
 
 #install haskell
 su -c "yum -y install ghc cabal-install"
@@ -24,7 +24,7 @@ cabal install vector statistics attoparsec
 
 #install ruby
 su -c "yum -y install ruby"
-gem install sinatra haml
+gem install sinatra haml rails slim
 
 #install lamp
 su -c "yum -y install httpd mysql mysql-server php php-mysql php-myadmin"
