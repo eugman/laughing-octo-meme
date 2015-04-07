@@ -2,7 +2,7 @@
 su -c "yum -y update"
 
 #install command line tools
-su -c "yum -y install htop lynx irssi screen tmux mc"
+su -c "yum -y install htop lynx irssi screen tmux mc nmap"
 
 #install command line coding tools
 su -c "yum -y install git valgrind"
@@ -32,4 +32,4 @@ su -c "service httpd start; service mysql start"
 #su -c "/user/bin/mysql_secure_installation"
 
 #install desktop apps
-su -c "yum -y install eric geany lazarus drpython remmina remmina-plugin-rdp"
+su -c "yum -y install eric geany lazarus drpython remmina remmina-plugin-rdp zenmap"
