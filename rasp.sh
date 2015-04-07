@@ -4,7 +4,7 @@
 sudo apt-get update && sudo apt-get -y upgrade
 
 #Install command line tools
-sudo apt-get -y install htop lynx irssi screen tmux wicd-config aptitude
+sudo apt-get -y install htop lynx irssi screen tmux wicd-config aptitude mc
 
 #install samaba
 sudo apt-get install cifs-utils samaba-common-bin
@@ -18,9 +18,6 @@ sudo apt-get -y install build-essential libedit-dev manpages-dev
 #install C# programming
 sudo apt-get -y install mono-complete
 
-#install desktop apps
-sudo apt-get -y install iceweasel geany remmina remmina-plugin-rdp evince
-
 #install haskell
 sudo apt-get -y install ghc cabal-install
 cabal update
@@ -30,3 +27,12 @@ cabal install vector statistics attoparsec
 sudo apt-get install ruby
 gem install sinatra haml
 
+#install lamp
+sudo apt-get install apache2 php5 mysql-client mysql-server php-myadmin
+
+#install desktop apps
+sudo apt-get -y install iceweasel geany remmina remmina-plugin-rdp evince
+
+
+
+#todo: append iceweasel to autostart
