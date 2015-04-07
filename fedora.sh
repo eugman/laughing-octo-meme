@@ -24,7 +24,7 @@ cabal install vector statistics attoparsec
 
 #install ruby
 su -c "yum -y install ruby"
-gem install sinatra haml rails slim
+gem install sinatra haml rails slim shotgun
 
 #install lamp
 su -c "yum -y install httpd mysql mysql-server php php-mysql php-myadmin"
