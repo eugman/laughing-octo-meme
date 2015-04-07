@@ -2,7 +2,7 @@
 su -c "yum -y update"
 
 #install command line tools
-su -c "yum -y install htop lynx irssi screen tmux mc nmap"
+su -c "yum -y install htop lynx irssi screen tmux mc nmap wget"
 
 #install command line coding tools
 su -c "yum -y install git valgrind"
