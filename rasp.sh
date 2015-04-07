@@ -25,7 +25,7 @@ cabal install vector statistics attoparsec
 
 #install ruby
 sudo apt-get install ruby
-gem install sinatra haml
+gem install sinatra haml slim rails shotgun
 
 #install lamp
 sudo apt-get install apache2 php5 mysql-client mysql-server php-myadmin
