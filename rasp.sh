@@ -4,7 +4,7 @@
 sudo apt-get update && sudo apt-get -y upgrade
 
 #Install command line tools
-sudo apt-get -y install htop lynx irssi screen tmux wicd-config aptitude mc nmap
+sudo apt-get -y install htop lynx irssi screen tmux wicd-config aptitude mc nmap wget
 
 #install samaba
 sudo apt-get install cifs-utils samaba-common-bin
