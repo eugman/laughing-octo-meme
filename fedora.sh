@@ -31,5 +31,11 @@ su -c "yum -y install httpd mysql mysql-server php php-mysql php-myadmin"
 su -c "service httpd start; service mysql start"
 #su -c "/user/bin/mysql_secure_installation"
 
+#install mean
+#http://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
+su -c "yum -y install mongodb-org nodejs npm"
+su -c "npm -g install express bower"
+su -c "service mongod start"
+
 #install desktop apps
 su -c "yum -y install eric geany lazarus drpython remmina remmina-plugin-rdp zenmap"
