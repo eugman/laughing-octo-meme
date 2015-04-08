@@ -40,3 +40,7 @@ choco install nmap
 choco install dotpeek 
 choco install mongodb
 choco install ilspy
+
+
+#servers
+Install-WindowsFeature -name hyper-v -IncludeManagementTools #-Restart
