@@ -20,7 +20,7 @@ yum -y install monodevelop monodevelop-versioncontrol monodevelop-database
 #install haskell
 yum -y install ghc cabal-install
 cabal update
-cabal install vector statistics attoparsec
+cabal install vector statistics attoparsec criterion
 
 #install ruby
 yum -y install ruby
