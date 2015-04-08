@@ -21,7 +21,7 @@ apt-get -y install mono-complete
 #install haskell
 apt-get -y install ghc cabal-install
 cabal update
-cabal install vector statistics attoparsec
+cabal install vector statistics attoparsec criterion
 
 #install ruby
 apt-get install ruby
