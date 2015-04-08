@@ -10,7 +10,7 @@ apt-get -y install htop lynx irssi screen tmux wicd-config aptitude mc nmap wget
 apt-get install cifs-utils samaba-common-bin
 
 #Install command line coding tools
-apt-get -y install git valgrind
+apt-get -y install git valgrind python-rpi.gpio
 
 #install c programming
 apt-get -y install build-essential libedit-dev manpages-dev
@@ -28,7 +28,7 @@ apt-get install ruby
 gem install sinatra haml slim rails shotgun
 
 #install lamp
-apt-get install apache2 php5 mysql-client mysql-server php-myadmin
+apt-get install apache2 php5 mysql-client mysql-server phpmyadmin
 
 #install desktop apps
 apt-get -y install iceweasel geany remmina remmina-plugin-rdp evince zenmap
