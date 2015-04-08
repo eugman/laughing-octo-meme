@@ -19,9 +19,11 @@ apt-get -y install build-essential libedit-dev manpages-dev
 apt-get -y install mono-complete
 
 #install haskell
-apt-get -y install ghc cabal-install
-cabal update
-cabal install vector statistics attoparsec criterion
+##Haskell doesn't seem to play nice with the raspberry pi :(
+#apt-get -y install ghc cabal-install
+#cabal update
+#cabal install vector statistics attoparsec criterion
+
 
 #install ruby
 apt-get install ruby
