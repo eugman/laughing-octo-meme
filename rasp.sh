@@ -28,7 +28,7 @@ else
 	cabal install vector statistics attoparsec criterion
 
 	#install ruby
-	apt-get install ruby
+	apt-get install ruby ruby1.9.1-dev libsqllite3-dev
 	gem install sinatra haml slim rails shotgun pry
 	#install gems for fuzzyl's stuff
 	gem install git json redcarpet
