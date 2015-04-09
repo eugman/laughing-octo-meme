@@ -2,7 +2,7 @@
 yum -y update
 
 #install command line tools
-yum -y install htop lynx irssi screen tmux mc nmap wget
+yum -y install htop lynx irssi screen tmux mc nmap wget curl
 
 #install command line coding tools
 yum -y install git valgrind
@@ -15,7 +15,7 @@ yum -y groupinstall development-tools
 yum -y install libedit-dev* man-pages libstdc++-docs
 
 #install C# programming
-yum -y install monodevelop monodevelop-versioncontrol monodevelop-database
+yum -y install monodevelop monocomplete
 
 #install haskell
 yum -y install ghc cabal-install
@@ -39,3 +39,7 @@ service mongod start
 
 #install desktop apps
 yum -y install eric geany lazarus drpython remmina remmina-plugin-rdp zenmap
+
+
+#install a bunch of random stuff, I don't know if any of this works
+yum -y install scala erlang eclipse golang rust clojure dmd ldc gdc
