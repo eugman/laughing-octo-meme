@@ -5,7 +5,7 @@ if [ $UID -ne 0]; then
 else
 	
 	#Update everything
-	apt-get update && apt-get -y upgrade
+	apt-get update && apt-get -y upgrade && apt-get clean
 
 	#Install command line tools
 	apt-get -y install htop lynx irssi screen tmux wicd-config aptitude mc nmap wget ssh ssh-server
