@@ -1,6 +1,7 @@
 #Copy dotfiles
 cp .vimrc ~/.vimrc
 cp .tmux.conf ~/.tmux.conf
+.bashrc >> ~/.bashrc
 
 #configure git
 git config --global core.editor "vim"
