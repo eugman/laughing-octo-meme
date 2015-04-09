@@ -26,6 +26,8 @@ cabal install vector statistics attoparsec criterion
 #install ruby
 apt-get install ruby
 gem install sinatra haml slim rails shotgun pry
+#install gems for fuzzyl's stuff
+gem install git json redcarpet
 
 #install lamp
 apt-get install apache2 php5 mysql-client mysql-server phpmyadmin

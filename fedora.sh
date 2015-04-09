@@ -25,6 +25,8 @@ cabal install vector statistics attoparsec criterion
 #install ruby
 yum -y install ruby
 gem install sinatra haml rails slim shotgun pry
+#add gems for fuzzyl's stuff
+gem install json git redcarpet
 
 #install lamp
 yum -y install httpd mysql mysql-server php php-mysql php-myadmin
