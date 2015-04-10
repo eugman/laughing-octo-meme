@@ -1,17 +1,24 @@
 #!/user/bin/env bash
 
-if [ $UID -ne 0]; then
+if [ $UID -ne 0 ]; then
 	echo Non root user!
 else
+	
+	#change the keyboard layout
+	sed -i 's/XKBLAYOUT="gb"/XKBLAYOUT="us"/' /etc/default/keyboard
+
+	#change the clock default and browser default
+	sed -i 's@id=/usr/share/raspi-ui-overrides/applications/epiphany-browser.desktop@id=/usr/share/applications/iceweasel.desktop@' /home/pi/.config/lxpanel/LXDE-pi/panels/panel
+	sed -i 's/ClockFmt=%R/ClockFmt=%r/' /home/pi/.config/lxpanel/LXDE-pi/panels/panel
 	
 	#Update everything
 	apt-get update && apt-get -y upgrade && apt-get clean
 
 	#Install command line tools
-	apt-get -y install htop lynx irssi screen tmux wicd-config aptitude mc nmap wget ssh ssh-server vim
+	apt-get -y install htop lynx irssi screen tmux wicd-config aptitude mc nmap wget ssh openssh vim
 
 	#Install command line games
-	apt-get -y install zangband ADOM nethack bombardier tome
+	apt-get -y install nethack-console bombardier
 
 	#install samaba
 	apt-get -y install cifs-utils samaba-common-bin
@@ -26,7 +33,7 @@ else
 	apt-get clean
 
 	#install C# programming
-	apt-get -y install mono-complete monodevelop
+	apt-get -y install mono-complete monodevelop monodevelop-database monodevelop-versioncontrol
 
 	#install haskell
 	#apt-get -y install ghc cabal-install
@@ -34,7 +41,7 @@ else
 	#cabal install vector statistics attoparsec criterion
 
 	#install ruby
-	apt-get install ruby ruby1.9.1-dev libsqlite3-dev
+	apt-get install ruby ruby1.9.1-dev libsqlite3-dev ri ruby-dev
 	gem install sinatra haml slim rails shotgun pry bundler
 	#install gems for fuzzyl's stuff
 	gem install git json redcarpet
