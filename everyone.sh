@@ -1,8 +1,10 @@
 #Copy dotfiles
 cp .vimrc ~/.vimrc
 cp .tmux.conf ~/.tmux.conf
+.bashrc >> ~/.bashrc
 
 #configure git
+git config --global core.editor "vim"
 git config --global color.ui true
 git config --global user.name "Eugene Meidinger"
 git config --global user.email eugene@eugenemeidinger.com
