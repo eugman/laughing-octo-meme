@@ -12,7 +12,7 @@ else
 	yum -y install htop lynx irssi screen tmux mc nmap wget curl
 
 	#install command line coding tools
-	yum -y install git valgrind
+	yum -y install git valgrind vim
 
 	#install samba
 	yum -y install samba samba-client system-config-samba cifs-utils
