@@ -120,7 +120,7 @@ then
 	#install C# programming
 	yum -y install monodevelop monocomplete monodevelop-database monodevelop-versioncontrol
 
-	if [[ $desktop == 'n' ]]
+	if [[ $pi == 'n' ]]
 	then
 		#install haskell
 		yum -y install ghc cabal-install
