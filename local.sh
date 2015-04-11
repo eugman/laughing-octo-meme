@@ -5,7 +5,7 @@ if [[ ! -e ~/.vimrc ]]
 then
 	cp .vimrc ~/.vimrc
 fi
-if [[ ! -e ~/.vimrc ]]
+if [[ ! -e ~/.tmux.conf ]]
 then
 	cp .tmux.conf ~/.tmux.conf
 fi
