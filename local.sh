@@ -1,16 +1,16 @@
 #! /bin/bash
 
 #Copy dotfiles
-if [[ ! ~/.vimrc -e ]]
+if [[ ! -e ~/.vimrc ]]
 then
 	cp .vimrc ~/.vimrc
 fi
-if [[ ! ~/.vimrc -e ]]
+if [[ ! -e ~/.vimrc ]]
 then
 	cp .tmux.conf ~/.tmux.conf
 fi
 
-.bashrc >> ~/.bashrc
+cat .bashrc >> ~/.bashrc
 
 #configure git
 git config --global core.editor "vim"
