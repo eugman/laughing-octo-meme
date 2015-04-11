@@ -49,7 +49,11 @@ then
 	apt-get -y install cifs-utils samaba-common-bin
 
 	#Install command line coding tools
-	apt-get -y install git valgrind python-rpi.gpio
+	apt-get -y install git valgrind 
+	if [[ $pi == 'y' ]]
+	then
+		apt-get -y install python-rpi.gpio
+	fi
 
 	#install c programming
 	apt-get -y install build-essential libedit-dev manpages-dev
