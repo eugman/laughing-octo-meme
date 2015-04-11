@@ -10,7 +10,12 @@ then
 	cp .tmux.conf ~/.tmux.conf
 fi
 
-cat .bashrc >> ~/.bashrc
+if grep -q tmux ~/.bashrc
+then
+	#how do I switch this?
+else
+	cat .bashrc >> ~/.bashrc
+fi
 
 #configure git
 git config --global core.editor "vim"
