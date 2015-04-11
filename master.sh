@@ -80,6 +80,7 @@ then
 		rm node_latest_armhf.deb
 	else
 		sudo apt-get -y install nodejs
+		sudo apt-get -y install npm
 	fi
 	
 	#clean again, just to be safe
