@@ -155,6 +155,8 @@ gem install sinatra haml slim rails shotgun pry bundler
 gem install git json redcarpet
 
 #install node packages
+npm -g update
+npm -g install npm
 npm -g install azure-cli express bower
 
 if [[ $pi == 'n' ]]
