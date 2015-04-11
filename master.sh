@@ -21,7 +21,7 @@ done
 while [[ $desktop != 'y' && $desktop != 'n' ]]
 do
 	echo "Do you want to install desktop apps? (y/n)"
-	read pi
+	read desktop
 done
 
 if [[ $debian = 'y' ]]
