@@ -67,10 +67,10 @@ then
 	fi
 
 	#install ruby
-	apt-get install ruby ruby1.9.1-dev libsqlite3-dev ri ruby-dev
+	apt-get -y install ruby ruby1.9.1-dev libsqlite3-dev ri ruby-dev
 
 	#install lamp
-	apt-get install apache2 php5 mysql-client mysql-server phpmyadmin
+	apt-get -y install apache2 php5 mysql-client mysql-server phpmyadmin
 
 	if [[ $pi == 'y' ]]
 	then
@@ -79,7 +79,7 @@ then
 		sudo dpkg -i node_latest_armhf.deb
 		rm node_latest_armhf.deb
 	else
-		sudo apt-get install nodejs
+		sudo apt-get -y install nodejs
 	fi
 	
 	#clean again, just to be safe
@@ -134,7 +134,7 @@ then
 	yum -y install mongodb-org nodejs npm
 	service mongod start
 	
-	if [[ $desktop = 'y']]
+	if [[ $desktop = 'y' ]]
 	then
 		#install desktop apps
 		yum -y install eric geany lazarus drpython remmina remmina-plugin-rdp zenmap
