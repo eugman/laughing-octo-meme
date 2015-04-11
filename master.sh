@@ -24,8 +24,8 @@ do
 	read desktop
 done
 
-if [[ $debian = 'y' ]]
-
+if [[ $debian == 'y' ]]
+then
 	if [[ $pi == 'y' ]]
 	then
 		#change the keyboard layout
@@ -85,7 +85,7 @@ if [[ $debian = 'y' ]]
 	#clean again, just to be safe
 	apt-get clean
 
-	if [[ $desktop = 'y' ]]
+	if [[ $desktop == 'y' ]]
 	then
 		#install desktop apps
 		apt-get -y install iceweasel geany remmina remmina-plugin-rdp evince zenmap
