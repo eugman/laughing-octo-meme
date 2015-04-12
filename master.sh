@@ -49,7 +49,7 @@ then
 	apt-get -y install cifs-utils samaba-common-bin
 
 	#Install command line coding tools
-	apt-get -y install git valgrind 
+	apt-get -y install git valgrind python-pip
 	if [[ $pi == 'y' ]]
 	then
 		apt-get -y install python-rpi.gpio
@@ -95,11 +95,15 @@ then
 	then
 		#install desktop apps
 		apt-get -y install iceweasel geany remmina remmina-plugin-rdp evince zenmap
+		if [[ -e /etc/xdg/lxsession/LXDE-pi/autostart && ! grep -q iceweasel /etc/xdg/lxsession/LXDE-pi/autostart ]]	
+		then
+			echo "@iceweasel" >> /etc/xdg/lxsession/LXDE-pi/autostart
+		fi
 	fi
 
 fi
 
-#todo: append iceweasel to autostart
+
 if [[ $debian == 'n' ]]
 then
 	#update everything
@@ -109,7 +113,7 @@ then
 	yum -y install htop lynx irssi screen tmux mc nmap wget curl
 
 	#install command line coding tools
-	yum -y install git valgrind vim
+	yum -y install git valgrind vim python-pip
 
 	#install samba
 	yum -y install samba samba-client system-config-samba cifs-utils
@@ -162,6 +166,10 @@ then
 		fi
 	fi
 fi
+
+#install powerline
+pip install -U pip
+pip install --user git+git://github.com/Lokaltog/powerline
 
 #install gems
 gem install sinatra haml slim rails shotgun pry bundler
