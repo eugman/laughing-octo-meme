@@ -98,12 +98,6 @@ then
 		then
 			echo "@iceweasel" >> /etc/xdg/lxsession/LXDE-pi/autostart
 		fi
-			
-then
-	#how do I switch this?
-else
-	cat .bashrc >> ~/.bashrc
-fi
 	fi
 
 fi
