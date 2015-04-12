@@ -95,10 +95,10 @@ then
 	then
 		#install desktop apps
 		apt-get -y install iceweasel geany remmina remmina-plugin-rdp evince zenmap
-#		if [[ -e /etc/xdg/lxsession/LXDE-pi/autostart && ! grep -q iceweasel /etc/xdg/lxsession/LXDE-pi/autostart ]]	
-#		then
-#			echo "@iceweasel" >> /etc/xdg/lxsession/LXDE-pi/autostart
-#		fi
+		if [[ -e /etc/xdg/lxsession/LXDE-pi/autostart && ! grep -q iceweasel /etc/xdg/lxsession/LXDE-pi/autostart ]]	
+		then
+			echo "@iceweasel" >> /etc/xdg/lxsession/LXDE-pi/autostart
+		fi
 	fi
 
 fi
@@ -153,17 +153,17 @@ then
 		#install a bunch of random stuff, I don't know if any of this works
 		yum -y install scala erlang eclipse golang rust clojure dmd ldc gdc
 
-#		if [[ $pi == 'y' ]] ||   yum -q list steam | grep -q steam
-#		then
-#			#???
-#		else
-#			yum -y install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
+		if [[ $pi == 'y' ]] ||   yum -q list steam | grep -q steam
+		then
+			#???
+		else
+			yum -y install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
 		
-#			#install codecs 
-#			yum -y install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} ffmpeg 
-#			yum -y install steam
-#			yum install gnash-plugin
-#		fi
+			#install codecs 
+			yum -y install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} ffmpeg 
+			yum -y install steam
+			yum install gnash-plugin
+		fi
 	fi
 fi
 
