@@ -7,8 +7,8 @@ syntax on
 set ruler
 set background=dark
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+#python from powerline.vim import setup as powerline_setup
+#python powerline_setup()
+#python del powerline_setup
 
 set laststatus=2
