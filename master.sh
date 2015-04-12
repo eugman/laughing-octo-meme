@@ -95,10 +95,10 @@ then
 	then
 		#install desktop apps
 		apt-get -y install iceweasel geany remmina remmina-plugin-rdp evince zenmap
-		if [[ -e /etc/xdg/lxsession/LXDE-pi/autostart && ! grep -q iceweasel /etc/xdg/lxsession/LXDE-pi/autostart ]]	
-		then
-			echo "@iceweasel" >> /etc/xdg/lxsession/LXDE-pi/autostart
-		fi
+#		if [[ -e /etc/xdg/lxsession/LXDE-pi/autostart && ! grep -q iceweasel /etc/xdg/lxsession/LXDE-pi/autostart ]]	
+#		then
+#			echo "@iceweasel" >> /etc/xdg/lxsession/LXDE-pi/autostart
+#		fi
 	fi
 
 fi
