@@ -79,6 +79,7 @@ then
 	if [[ $pi == 'y' ]]
 	then
 		#install node
+		#todo check if instlaled
 		wget http://node-arm.herokuapp.com/node_latest_armhf.deb
 		sudo dpkg -i node_latest_armhf.deb
 		rm node_latest_armhf.deb
@@ -143,9 +144,16 @@ then
 	then
 		#install desktop apps
 		yum -y install eric geany lazarus drpython remmina remmina-plugin-rdp zenmap
+		
+		#install codecs 
+		yum -y install gstreamer-libav gstreamer-plugins-ugly gstreamer-plugins-bad-freeworld
 
 		#install a bunch of random stuff, I don't know if any of this works
 		yum -y install scala erlang eclipse golang rust clojure dmd ldc gdc
+
+		#todo add rpmfusion
+		#todo add steam
+		#todo add skype?
 	fi
 fi
 
