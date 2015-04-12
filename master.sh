@@ -153,7 +153,7 @@ then
 		#install a bunch of random stuff, I don't know if any of this works
 		yum -y install scala erlang eclipse golang rust clojure dmd ldc gdc
 
-		if [[ $pi == 'y' || yum -q list steam | grep -q steam]]
+		if [[ $pi == 'y' ]] ||   yum -q list steam | grep -q steam
 		then
 			#???
 		else
