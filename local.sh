@@ -10,10 +10,8 @@ then
 	cp .tmux.conf ~/.tmux.conf
 fi
 
-if grep -q tmux ~/.bashrc
+if ! grep -q tmux ~/.bashrc
 then
-	#how do I switch this?
-else
 	cat .bashrc >> ~/.bashrc
 fi
 
