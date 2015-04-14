@@ -10,17 +10,15 @@ then
 	cp .tmux.conf ~/.tmux.conf
 fi
 
+if [[ ! -e ~/.gitconfig ]]
+then
+	cp .gitconfig ~/.gitconfig
+fi
 if ! grep -q tmux ~/.bashrc
 then
 	cat .bashrc >> ~/.bashrc
 fi
 
-#configure git
-git config --global core.editor "vim"
-git config --global color.ui true
-git config --global user.name "Eugene Meidinger"
-git config --global user.email eugene@eugenemeidinger.com
-#git config --global push.default simple
 if [[ ! -d ~/progProj ]]
 then
 	mkdir  ~/progProj
