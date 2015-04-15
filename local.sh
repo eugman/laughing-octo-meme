@@ -1,5 +1,7 @@
 #! /bin/bash
 
+cd dotfiles
+
 #Copy dotfiles
 if [[ ! -e ~/.vimrc ]]
 then
