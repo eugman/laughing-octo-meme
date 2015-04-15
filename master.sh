@@ -24,8 +24,7 @@ do
 	read desktop
 done
 
-if [[ $debian == 'y' ]]
-then
+
 	if [[ $pi == 'y' ]]
 	then
 		#change the keyboard layout
@@ -36,6 +35,10 @@ then
 		sed -i 's/ClockFmt=%R/ClockFmt=%r/' /home/pi/.config/lxpanel/LXDE-pi/panels/panel
 	fi
 	
+
+
+if [[ $debian == 'y' ]]
+then
 	#Update everything
 	apt-get update && apt-get -y upgrade && apt-get clean
 
@@ -110,7 +113,10 @@ then
 	yum -y update
 
 	#install command line tools
-	yum -y install htop lynx irssi screen tmux mc nmap wget curl
+	yum -y install htop lynx irssi screen tmux wicd-curses mc nmap wget curl ssh
+
+	#Install command line games
+	yum -y install nethack-console bombardier
 
 	#install command line coding tools
 	yum -y install git valgrind vim python-pip
@@ -162,7 +168,7 @@ then
 			#install codecs 
 			yum -y install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} ffmpeg 
 			yum -y install steam
-			yum install gnash-plugin
+			yum installi gnash-plugin
 		fi
 	fi
 fi
