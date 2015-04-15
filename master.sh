@@ -40,7 +40,7 @@ then
 	apt-get update && apt-get -y upgrade && apt-get clean
 
 	#Install command line tools
-	apt-get -y install htop lynx irssi screen tmux wicd-curses aptitude mc nmap wget ssh vim
+	apt-get -y install htop lynx irssi screen tmux wicd-curses aptitude mc nmap wget ssh vim scrot
 
 	#Install command line games
 	apt-get -y install nethack-console bombardier
