@@ -29,6 +29,10 @@ then
 	git clone https://github.com/eugman/learnCTheHardWay.git
 	git clone https://github.com/eugman/buildYourOwnLisp.git
 	git clone https://github.com/eugman/where-at.git
+
+	#https://powerline.readthedocs.org/en/latest/installation/linux.html
+	git clone https://github.com/powerline/fonts.git
+	bash fonts/install.sh
 fi
 
 exit 0

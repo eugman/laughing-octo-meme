@@ -46,7 +46,7 @@ then
 	apt-get -y install htop lynx irssi screen tmux wicd-curses aptitude mc nmap wget ssh vim scrot
 
 	#Install command line games
-	apt-get -y install nethack-console bombardier
+	apt-get -y install angabnd angband-doc crawl gearhead gearhead2 moria omega-rpg bsdgames freesweep gnobots2 zangband-data slashem nethack-console bombardier 
 
 	#install samaba
 	apt-get -y install cifs-utils samaba-common-bin
@@ -78,14 +78,17 @@ then
 
 	#install lamp
 	apt-get -y install apache2 php5 mysql-client mysql-server phpmyadmin
-
-	if [[ $pi == 'y' ]]
+    
+	if [[ $pi == 'y' ]] 
 	then
-		#install node
-		#todo check if instlaled
-		wget http://node-arm.herokuapp.com/node_latest_armhf.deb
-		sudo dpkg -i node_latest_armhf.deb
-		rm node_latest_armhf.deb
+		if ! hash node 2>/dev/null
+		then
+			#install node
+			#todo check if instlaled
+			wget http://node-arm.herokuapp.com/node_latest_armhf.deb
+			sudo dpkg -i node_latest_armhf.deb
+			rm node_latest_armhf.deb
+		fi
 	else
 		sudo apt-get -y install nodejs
 		sudo apt-get -y install npm
@@ -103,7 +106,6 @@ then
 #			echo "@iceweasel" >> /etc/xdg/lxsession/LXDE-pi/autostart
 #		fi
 	fi
-
 fi
 
 
@@ -147,7 +149,7 @@ then
 
 	#install mean
 	#http://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
-	yum -y install mongodb-org nodejs-legacy npm
+	yum -y install mongodb-org epel-release nodejs npm
 	service mongod start
 	
 	if [[ $desktop = 'y' ]]
@@ -161,7 +163,7 @@ then
 
 		if [[ $pi == 'y' ]] ||   yum -q list steam | grep -q steam
 		then
-			#???
+			echo no steam for you!
 		else
 			yum -y install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
 		
@@ -175,7 +177,7 @@ fi
 
 #install powerline
 pip install -U pip
-pip install --user git+git://github.com/Lokaltog/powerline
+pip install git+git://github.com/Lokaltog/powerline
 
 #install gems
 gem install sinatra haml slim rails shotgun pry bundler
