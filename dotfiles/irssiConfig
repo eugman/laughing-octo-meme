@@ -103,6 +103,8 @@ channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; },
   { name = "#raspbian"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#reddit-homelab"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#reddit-sysadmin"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
 aliases = {
