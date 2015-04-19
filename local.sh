@@ -1,5 +1,9 @@
 #! /bin/bash
 
+if [[ ! -e ~/Desktop/wiki.sh ]]
+then
+	cp wiki.sh ~/Desktop/
+fi
 cd dotfiles
 
 #Copy dotfiles
@@ -21,6 +25,15 @@ then
 	cat .bashrc >> ~/.bashrc
 fi
 
+if [[ ! -e ~/.gemrc ]]
+then
+	cp .gemrc ~/.gemrc
+fi
+if [[ ! -d ~/.irssi ]]
+then
+	mkdir ~/.irssi/
+	cp irssiConfig ~/.irssi/config
+fi
 if [[ ! -d ~/progProj ]]
 then
 	mkdir  ~/progProj
@@ -34,6 +47,7 @@ then
 	git clone https://github.com/powerline/fonts.git
 	bash fonts/install.sh
 fi
+
 
 exit 0
 

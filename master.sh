@@ -46,10 +46,11 @@ then
 	apt-get -y install htop lynx irssi screen tmux wicd-curses aptitude mc nmap wget ssh vim scrot
 
 	#Install command line games
-	apt-get -y install angabnd angband-doc crawl gearhead gearhead2 moria omega-rpg bsdgames freesweep gnobots2 zangband-data slashem nethack-console bombardier 
+	apt-get -y install angband angband-doc crawl gearhead gearhead2 moria omega-rpg bsdgames freesweep gnobots2 zangband-data slashem nethack-console bombardier 
 
 	#install samaba
-	apt-get -y install cifs-utils samaba-common-bin
+	apt-get -y install cifs-utils 
+	apt-get -y install samaba-common-bin
 
 	#Install command line coding tools
 	apt-get -y install git valgrind python-pip
