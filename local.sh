@@ -46,6 +46,8 @@ then
 	#https://powerline.readthedocs.org/en/latest/installation/linux.html
 	git clone https://github.com/powerline/fonts.git
 	bash fonts/install.sh
+	fc-cache -vf ~/.fonts/
+
 fi
 
 

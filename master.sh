@@ -188,7 +188,7 @@ gem install --no-rdoc --no-ri   git json redcarpet
 #install node packages
 npm -g update
 npm -g install npm
-npm -g install azure-cli express bower
+npm -g install azure-cli express bower grunt gulp mongoose jade
 
 if [[ $pi == 'n' ]]
 then
