@@ -181,9 +181,9 @@ pip install -U pip
 pip install git+git://github.com/Lokaltog/powerline
 
 #install gems
-gem install sinatra haml slim rails shotgun pry bundler tmuxinator
+gem install --no-rdoc --no-ri   sinatra haml slim rails shotgun pry bundler tmuxinator
 #install gems for fuzzyl's stuff
-gem install git json redcarpet
+gem install --no-rdoc --no-ri   git json redcarpet
 
 #install node packages
 npm -g update
