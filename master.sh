@@ -50,7 +50,7 @@ then
 
 	#install samaba
 	apt-get -y install cifs-utils 
-	apt-get -y samaba-common-bin
+	apt-get -y install samaba-common-bin
 
 	#Install command line coding tools
 	apt-get -y install git valgrind python-pip

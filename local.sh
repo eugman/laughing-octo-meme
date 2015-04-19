@@ -29,8 +29,11 @@ if [[ ! -e ~/.gemrc ]]
 then
 	cp .gemrc ~/.gemrc
 fi
-
-
+if [[ ! -d ~/.irssi ]]
+then
+	mkdir ~/.irssi/
+	cp irssiConfig ~/.irssi/config
+fi
 if [[ ! -d ~/progProj ]]
 then
 	mkdir  ~/progProj
