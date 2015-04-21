@@ -43,7 +43,7 @@ then
 	apt-get update && apt-get -y upgrade && apt-get clean
 
 	#Install command line tools
-	apt-get -y install htop lynx irssi screen tmux wicd-curses aptitude mc nmap wget ssh vim scrot mutt
+	apt-get -y install htop lynx irssi screen tmux wicd-curses aptitude mc nmap wget ssh vim scrot mutt locate
 
 	#Install command line games
 	apt-get -y install angband angband-doc crawl gearhead gearhead2 moria omega-rpg bsdgames freesweep gnobots2 zangband-data slashem nethack-console bombardier 
@@ -116,7 +116,7 @@ then
 	yum -y update
 
 	#install command line tools
-	yum -y install htop lynx irssi screen tmux wicd-curses mc nmap wget curl ssh mutt
+	yum -y install htop lynx irssi screen tmux wicd-curses mc nmap wget curl ssh mutt locate
 
 	#Install command line games
 	yum -y install nethack-console bombardier
