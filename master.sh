@@ -43,13 +43,14 @@ then
 	apt-get update && apt-get -y upgrade && apt-get clean
 
 	#Install command line tools
-	apt-get -y install htop lynx irssi screen tmux wicd-curses aptitude mc nmap wget ssh vim
+	apt-get -y install htop lynx irssi screen tmux wicd-curses aptitude mc nmap wget ssh vim scrot mutt
 
 	#Install command line games
-	apt-get -y install nethack-console bombardier
+	apt-get -y install angband angband-doc crawl gearhead gearhead2 moria omega-rpg bsdgames freesweep gnobots2 zangband-data slashem nethack-console bombardier 
 
 	#install samaba
-	apt-get -y install cifs-utils samaba-common-bin
+	apt-get -y install cifs-utils 
+	apt-get -y install samaba-common-bin
 
 	#Install command line coding tools
 	apt-get -y install git valgrind python-pip
@@ -78,14 +79,17 @@ then
 
 	#install lamp
 	apt-get -y install apache2 php5 mysql-client mysql-server phpmyadmin
-
-	if [[ $pi == 'y' ]]
+    
+	if [[ $pi == 'y' ]] 
 	then
-		#install node
-		#todo check if instlaled
-		wget http://node-arm.herokuapp.com/node_latest_armhf.deb
-		sudo dpkg -i node_latest_armhf.deb
-		rm node_latest_armhf.deb
+		if ! hash node 2>/dev/null
+		then
+			#install node
+			#todo check if instlaled
+			wget http://node-arm.herokuapp.com/node_latest_armhf.deb
+			sudo dpkg -i node_latest_armhf.deb
+			rm node_latest_armhf.deb
+		fi
 	else
 		sudo apt-get -y install nodejs
 		sudo apt-get -y install npm
@@ -103,7 +107,6 @@ then
 #			echo "@iceweasel" >> /etc/xdg/lxsession/LXDE-pi/autostart
 #		fi
 	fi
-
 fi
 
 
@@ -113,7 +116,7 @@ then
 	yum -y update
 
 	#install command line tools
-	yum -y install htop lynx irssi screen tmux wicd-curses mc nmap wget curl ssh
+	yum -y install htop lynx irssi screen tmux wicd-curses mc nmap wget curl ssh mutt
 
 	#Install command line games
 	yum -y install nethack-console bombardier
@@ -147,7 +150,7 @@ then
 
 	#install mean
 	#http://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
-	yum -y install mongodb-org nodejs-legacy npm
+	yum -y install mongodb-org epel-release nodejs npm
 	service mongod start
 	
 	if [[ $desktop = 'y' ]]
@@ -161,7 +164,7 @@ then
 
 		if [[ $pi == 'y' ]] ||   yum -q list steam | grep -q steam
 		then
-			#???
+			echo no steam for you!
 		else
 			yum -y install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
 		
@@ -175,17 +178,17 @@ fi
 
 #install powerline
 pip install -U pip
-pip install --user git+git://github.com/Lokaltog/powerline
+pip install git+git://github.com/Lokaltog/powerline
 
 #install gems
-gem install sinatra haml slim rails shotgun pry bundler
+gem install --no-rdoc --no-ri   sinatra haml slim rails shotgun pry bundler tmuxinator
 #install gems for fuzzyl's stuff
-gem install git json redcarpet
+gem install --no-rdoc --no-ri   git json redcarpet
 
 #install node packages
 npm -g update
 npm -g install npm
-npm -g install azure-cli express bower
+npm -g install azure-cli express bower grunt gulp mongoose jade
 
 if [[ $pi == 'n' ]]
 then
