@@ -6,7 +6,7 @@ if [ -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline
     source /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
 fi
 
-if [ `which tmux 2> /dev/null` -a -z "$TMUX" ]; then
+if [ -z "$TMUX" ]; then
     #tmux -2 attach || tmux -2 new; exit
 	tmux -2 new; exit
 fi
