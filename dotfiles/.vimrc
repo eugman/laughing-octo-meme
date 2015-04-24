@@ -1,3 +1,11 @@
+#Someday I'm going force myself to use the hjkl keys
+#map <Up>    <nop>
+#map <Down>  <nop>
+#map <Left>  <nop>
+#map <Right> <nop>
+
+
+
 filetype plugin indent on
 set autoindent
 set tabstop=4
