@@ -105,7 +105,7 @@ then
 	if [[ $desktop == 'y' ]]
 	then
 		#install desktop apps
-		apt-get -y install iceweasel geany remmina remmina-plugin-rdp evince zenmap gparted
+		apt-get -y install iceweasel geany remmina remmina-plugin-rdp evince zenmap gparted tuxtype
 #		if [[ -e /etc/xdg/lxsession/LXDE-pi/autostart && ! grep -q iceweasel /etc/xdg/lxsession/LXDE-pi/autostart ]]	
 #		then
 #			echo "@iceweasel" >> /etc/xdg/lxsession/LXDE-pi/autostart
@@ -164,7 +164,7 @@ then
 	if [[ $desktop = 'y' ]]
 	then
 		#install desktop apps
-		yum -y install eric geany lazarus drpython remmina remmina-plugin-rdp zenmap gparted
+		yum -y install eric geany lazarus drpython remmina remmina-plugin-rdp zenmap gparted tuxtype
 		
 
 		#install a bunch of random stuff, I don't know if any of this works
