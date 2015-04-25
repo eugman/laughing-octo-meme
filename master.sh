@@ -43,7 +43,7 @@ then
 	apt-get update && apt-get -y upgrade && apt-get clean
 
 	#Install command line tools
-	apt-get -y install htop lynx irssi screen tmux aptitude mc nmap wget ssh vim scrot mutt locate
+	apt-get -y install htop lynx irssi screen tmux aptitude mc nmap wget ssh vim scrot mutt locate gtypist
 	if [[ $pi == 'y' ]]
 	then
 		apt-get -y install wicd-curses
@@ -120,7 +120,7 @@ then
 	yum -y update
 
 	#install command line tools
-	yum -y install htop lynx irssi screen tmux mc nmap wget curl ssh mutt locate
+	yum -y install htop lynx irssi screen tmux mc nmap wget curl ssh mutt locate gtypist
 	if [[ $pi == 'y' ]]
 	then
 		yum -y install wicd-curses
