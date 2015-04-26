@@ -57,7 +57,7 @@ then
 	apt-get -y install samaba-common-bin
 
 	#Install command line coding tools
-	apt-get -y install git valgrind python-pip
+	apt-get -y install git tig valgrind python-pip
 	if [[ $pi == 'y' ]]
 	then
 		apt-get -y install python-rpi.gpio
@@ -130,7 +130,7 @@ then
 	yum -y install nethack-console bombardier
 
 	#install command line coding tools
-	yum -y install git valgrind vim python-pip
+	yum -y install git tig  valgrind vim python-pip
 
 	#install samba
 	yum -y install samba samba-client system-config-samba cifs-utils
