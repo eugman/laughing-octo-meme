@@ -106,10 +106,13 @@ then
 	then
 		#install desktop apps
 		apt-get -y install iceweasel geany remmina remmina-plugin-rdp evince zenmap gparted tuxtype abiword filezilla
-#		if [[ -e /etc/xdg/lxsession/LXDE-pi/autostart && ! grep -q iceweasel /etc/xdg/lxsession/LXDE-pi/autostart ]]	
-#		then
-#			echo "@iceweasel" >> /etc/xdg/lxsession/LXDE-pi/autostart
-#		fi
+		if [[ -e /etc/xdg/lxsession/LXDE-pi/autostart ]]
+		then
+			if ! grep -q iceweasel /etc/xdg/lxsession/LXDE-pi/autostart 	
+			then
+				echo "@iceweasel" >> /etc/xdg/lxsession/LXDE-pi/autostart
+			fi
+		fi
 	fi
 fi
 
@@ -189,7 +192,7 @@ pip install -U pip
 pip install git+git://github.com/Lokaltog/powerline
 
 #install gems
-gem install --no-rdoc --no-ri   sinatra haml slim rails shotgun pry bundler tmuxinator
+gem install --no-rdoc --no-ri   sinatra haml slim rails shotgun pry bundler tmuxinator rest-client
 #install gems for fuzzyl's stuff
 gem install --no-rdoc --no-ri   git json redcarpet
 
