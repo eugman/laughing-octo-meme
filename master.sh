@@ -24,6 +24,14 @@ do
 	read desktop
 done
 
+while [[ $unattended != 'y' && $unattended != 'n' ]]
+do
+	echo "Do you want to do an unattended install? (y/n)"
+	read unattended
+done
+
+
+
 
 	if [[ $pi == 'y' ]]
 	then
@@ -81,9 +89,12 @@ then
 	#install ruby
 	apt-get -y install ruby ruby1.9.1-dev libsqlite3-dev ri ruby-dev
 
-	#install lamp
-	apt-get -y install apache2 php5 mysql-client mysql-server phpmyadmin
-    
+	if [[ $unattended = 'n' ]]
+	then
+		#install lamp
+		apt-get -y install apache2 php5 mysql-client mysql-server phpmyadmin
+	fi    
+
 	if [[ $pi == 'y' ]] 
 	then
 		if ! hash node 2>/dev/null
@@ -151,10 +162,13 @@ then
 	#install ruby
 	yum -y install ruby ruby-devel sqlite3-devel
 
-	#install lamp
-	yum -y install httpd mysql mysql-server php php-mysql php-myadmin
-	service httpd start; service mysql start
-	#/user/bin/mysql_secure_installation
+	if [[ $unattended == 'n' ]]
+	then
+		#install lamp
+		yum -y install httpd mysql mysql-server php php-mysql php-myadmin
+		service httpd start; service mysql start
+		#/user/bin/mysql_secure_installation
+	fi
 
 	#install mean
 	#http://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
@@ -189,7 +203,7 @@ pip install -U pip
 pip install git+git://github.com/Lokaltog/powerline
 
 #install gems
-gem install --no-rdoc --no-ri   sinatra haml slim rails shotgun pry bundler
+gem install --no-rdoc --no-ri   sinatra haml slim rails shotgun pry bundler tmuxinator
 #install gems for fuzzyl's stuff
 gem install --no-rdoc --no-ri   git json redcarpet
 
