@@ -1,6 +1,6 @@
 #! /bin/bash
 
-if [[ ! -e ~/Desktop/wiki.sh ]]
+if [[ -e ~/Desktop/ && ! -e ~/Desktop/wiki.sh ]]
 then
 	cp wiki.sh ~/Desktop/
 fi

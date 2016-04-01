@@ -58,7 +58,7 @@ then
 	fi
 
 	#Install command line games
-	apt-get -y install angband angband-doc crawl gearhead gearhead2 moria omega-rpg bsdgames freesweep gnobots2 zangband-data slashem nethack-console bombardier 
+	apt-get -y install angband angband-doc crawl gearhead gearhead2 moria omega-rpg bsdgames freesweep gnobots2 zangband zangband-data slashem nethack-console bombardier 
 
 	#install samaba
 	apt-get -y install cifs-utils 
@@ -131,7 +131,7 @@ then
 	yum -y update
 
 	#install command line tools
-	yum -y install htop lynx irssi screen tmux wicd-curses mc nmap wget curl ssh
+	yum -y install htop lynx irssi screen tmux mc nmap wget curl ssh
 	if [[ $pi == 'y' ]]
 	then
 		yum -y install wicd-curses
