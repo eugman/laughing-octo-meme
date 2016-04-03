@@ -29,13 +29,12 @@ choco install javaruntime -y
 choco install visualstudiocode -y
 choco install powershell -y
 choco install nodejs.install -y
-choco install chocolateygui -y
 choco install ruby -y
 choco install filezilla -y
 choco install putty -y
 choco install python -y
 choco install virtualbox -y
-choco install fiddler -y
+choco install fiddler4 -y
 choco install wireshark -y
 choco install winmerge -y
 choco install webpi -y
