@@ -198,9 +198,12 @@ then
 	fi
 fi
 
-#install powerline
-pip install -U pip
-pip install git+git://github.com/Lokaltog/powerline
+if [[ $desktop = 'y' ]]
+then
+    #install powerline
+    pip install -U pip
+    pip install git+git://github.com/Lokaltog/powerline
+fi
 
 #install gems
 gem install --no-rdoc --no-ri   sinatra haml slim rails shotgun pry bundler tmuxinator
