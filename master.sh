@@ -84,6 +84,9 @@ then
 	then
 		#install haskell
 		apt-get -y install ghc cabal-install
+
+		#install arm toolchain
+		apt-get -y install gcc-arm-none-eabi
 	fi
 
 	#install ruby
