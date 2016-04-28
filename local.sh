@@ -41,7 +41,7 @@ then
 	git clone https://github.com/fuzyll/coppermind.git
 	git clone https://github.com/eugman/learnCTheHardWay.git
 	git clone https://github.com/eugman/buildYourOwnLisp.git
-	git clone https://github.com/eugman/where-at.git
+	git clone https://github.com/eugman/baking-pi.git
 
 	#https://powerline.readthedocs.org/en/latest/installation/linux.html
 	git clone https://github.com/powerline/fonts.git
