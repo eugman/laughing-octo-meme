@@ -124,6 +124,13 @@ then
 #		then
 #			echo "@iceweasel" >> /etc/xdg/lxsession/LXDE-pi/autostart
 #		fi
+		#Install VS code
+		curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+		mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+		echo "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list
+		sudo apt-get update
+		sudo apt-get install code
+		xdg-mime default code.desktop text/plain
 	fi
 fi
 
@@ -198,6 +205,12 @@ then
 			yum -y install steam
 			yum installi gnash-plugin
 		fi
+
+		rpm --import https://packages.microsoft.com/keys/microsoft.asc
+		echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo
+		yum check-update
+		yum install code
+		xdg-mime default code.desktop text/plain
 	fi
 fi
 
@@ -216,7 +229,8 @@ gem install --no-rdoc --no-ri   git json redcarpet
 #install node packages
 npm -g update
 npm -g install npm
-npm -g install azure-cli express bower
+npm -g install azure-cli express bower grunt gulp yo
+npm -g install @microsoft/sharepoint
 
 if [[ $pi == 'n' ]]
 then
