@@ -18,7 +18,7 @@ do
 	read desktop
 done
 
-
+$cpu=`arch`
 
 
 	if [[ $pi == 'y' ]]
@@ -38,14 +38,16 @@ done
 	apt-get update && apt-get -y upgrade && apt-get clean
 
 	#Install command line tools
-	apt-get -y install htop lynx screen tmux aptitude mc nmap wget curl ssh vim
-	if [[ $pi == 'y' ]]
+	apt-get -y install htop lynx screen tmux aptitude mc nmap wget curl ssh vim pianobar gtypist
+    apt-get -y install python-pip
+    apt-get -y install python-dev libjpeg-dev libfreetype6 libfreetype6-dev zlib1g-dev
+	if [[ $pi == 'y' && $desktop == 'n' ]]
 	then
 		apt-get -y install wicd-curses
 	fi
  
 	#Install command line coding tools
-	apt-get -y install valgrind python-pip
+	apt-get -y install powershell ipython ipython-notebook jupyter
 	if [[ $pi == 'y' ]]
 	then
 		apt-get -y install python-rpi.gpio
@@ -87,18 +89,31 @@ done
 
 	if [[ $desktop == 'y' && $pi == 'n' ]]
 	then
+        apt-get install steam
+        
+        apt-get -y install anki python3-distutils
+        
+        apt-get -y install libxss1 libgconf-2-4 libunwind8
+        wget -nc https://azuredatastudiobuilds.blob.core.windows.net/releases/1.0.0/azuredatastudio-linux-1.0.0.deb
+        dpkg -i ./azuredatastudio-linux-1.0.0.deb
 
-        apt-get install anki python3-distutils
-
-		#Install VS code
+        if [[ $cpu == 'x86_64' ]]        
+        then		
+        #Install VS code
 		curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
         install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
         sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
         apt-get install apt-transport-https		
         apt-get update
 		apt-get install code
+
+        else
+            wget -nc https://az764295.vo.msecnd.net/stable/f46c4c469d6e6d8c46f268d1553c5dc4b475840f/code_1.27.2-1536736591_i386.deb
+            dpkg -i ./code_1.27.2-1536736591_i386.deb            
+        fi
 		xdg-mime default code.desktop text/plain
         update-alternatives --set editor /usr/bin/code
+
 	fi
 
 
